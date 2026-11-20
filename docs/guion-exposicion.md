@@ -40,10 +40,11 @@
 7. Mencionar que el código sigue el wireframe: una carpeta para KPIs, otra para gráficos y la paleta en un solo archivo.
 
 ### 5. Fase 4 · Evaluación (1.5 min)
-- "Lo probaron [N] personas; la encuesta está dentro del mismo dashboard."
-- Mostrar la gráfica de promedios: fortalezas y debilidades.
-- "Además de preguntar si les gustó, comprobé si **entendieron**: [X]% respondió bien qué país tiene más títulos."
-- 1 o 2 mejoras que se aplicaron.
+- "Lo probaron **4 personas** de 20 a 55 años (emprendedora, ventas, estudiante y chofer); la encuesta está dentro del mismo dashboard."
+- Mostrar la gráfica de promedios: "**promedio general de 4.53 de 5**, y ninguna afirmación quedó debajo de 4".
+- "Además de preguntar si les gustó, comprobé si **entendieron**: el 100% acertó el país con más títulos, pero **solo el 50% acertó el género más común**."
+- "Con eso apliqué una mejora: cada gráfico ahora dice su conclusión en una frase ('**En resumen:** Drama es el género más común…')". Mostrarlo en vivo.
+- "Alguien pidió ver los títulos más vistos, pero el dataset no trae vistas; queda como trabajo futuro."
 
 ### 6. Conclusión (30 s)
 - "El catálogo de Netflix **se concentra en Estados Unidos**, es **muy reciente** y **los gustos cambian por región**: dramas en India, anime en Japón, romance en Corea."

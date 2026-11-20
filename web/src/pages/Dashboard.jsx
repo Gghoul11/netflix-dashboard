@@ -14,6 +14,7 @@ import {
   num,
   nombrePais,
   peliculasVsSeries,
+  pct,
   titulosPorPais,
   titulos as nTitulos,
   todosLosGeneros,
@@ -76,6 +77,24 @@ export default function Dashboard({ titulos, isoNum, mundo }) {
 
   const enPais = filtros.pais ? ` en ${nombrePais(filtros.pais)}` : ''
 
+  // "En resumen": la conclusión de cada gráfico en una frase (mejora de la Fase 4)
+  const lider = kpiPais.lider
+  const mayorTipo = tipos[0].total >= tipos[1].total ? tipos[0] : tipos[1]
+  const lectura = {
+    mapa: lider
+      ? `${lider.nombre} es el país con más títulos (${nTitulos(lider.total)}, ${pct(kpiPais.participacionLider)} del total con país).`
+      : null,
+    anio: porAnio.pico.total ? `El año con más estrenos fue ${porAnio.pico.anio}, con ${nTitulos(porAnio.pico.total)}.` : null,
+    tipo: filtrados.length
+      ? `Hay más ${mayorTipo.nombre === 'Película' ? 'películas' : 'series'}: ${pct(mayorTipo.pct)} del catálogo.`
+      : null,
+    genero: top5Generos[0] ? `${top5Generos[0].nombre} es el género más común, con ${nTitulos(top5Generos[0].total)}.` : null,
+    nube: top5Generos[0] ? `La palabra más grande, ${top5Generos[0].nombre}, es el género más común.` : null,
+    director: top5Directores[0]
+      ? `${top5Directores[0].nombre} es quien más títulos dirigió (${num(top5Directores[0].total)}).`
+      : null,
+  }
+
   return (
     <div className="space-y-4">
       <Filtros
@@ -117,6 +136,7 @@ export default function Dashboard({ titulos, isoNum, mundo }) {
           className="lg:col-span-2"
           titulo="¿Dónde se producen los títulos de Netflix?"
           subtitulo="Mapa de calor: más brillante = más títulos. Haz clic en un país para filtrar el dashboard."
+          lectura={lectura.mapa}
           nota="Un título coproducido por varios países cuenta para cada uno de ellos."
         >
           <MapaPaises
@@ -142,26 +162,32 @@ export default function Dashboard({ titulos, isoNum, mundo }) {
           className="lg:col-span-2"
           titulo={`Estrenos por año${enPais}`}
           subtitulo="Áreas apiladas: la altura total es el número de títulos estrenados ese año. Usa el filtro de años para acercarte a un periodo."
+          lectura={lectura.anio}
           nota="El dataset llega hasta septiembre de 2021, por eso ese año aparece incompleto."
         >
           <LineaEstrenos filas={porAnio.filas} tipo={filtros.tipo} />
         </Tarjeta>
-        <Tarjeta titulo={`Películas vs series${enPais}`} subtitulo="Proporción del catálogo por tipo de contenido">
+        <Tarjeta
+          titulo={`Películas vs series${enPais}`}
+          subtitulo="Proporción del catálogo por tipo de contenido"
+          lectura={lectura.tipo}
+        >
           <DonaTipo datos={tipos} />
         </Tarjeta>
       </div>
 
       {/* FILA 4 · Géneros y directores */}
       <div className="grid gap-4 lg:grid-cols-3">
-        <Tarjeta titulo={`Top 5 géneros${enPais}`} subtitulo="Número de títulos por género">
+        <Tarjeta titulo={`Top 5 géneros${enPais}`} subtitulo="Número de títulos por género" lectura={lectura.genero}>
           <BarrasTop datos={top5Generos} />
         </Tarjeta>
-        <Tarjeta titulo="Nube de géneros" subtitulo="Tamaño = número de títulos · en rojo, el top 5">
+        <Tarjeta titulo="Nube de géneros" subtitulo="Tamaño = número de títulos · en rojo, el top 5" lectura={lectura.nube}>
           <NubeGeneros generos={generos} />
         </Tarjeta>
         <Tarjeta
           titulo={`Top 5 directores${enPais}`}
           subtitulo="Directores con más títulos en el catálogo"
+          lectura={lectura.director}
           nota="Excluye los títulos sin director registrado (30 % del catálogo)."
         >
           <BarrasTop datos={top5Directores} />
