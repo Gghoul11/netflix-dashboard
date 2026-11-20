@@ -1,0 +1,11 @@
+# Python
+.venv/
+__pycache__/
+# Node
+web/node_modules/
+web/dist/
+# Secretos (nunca subir)
+.env
+web/.env.local
+# Respaldo de encuestas (datos personales de participantes)
+data/encuestas.csv

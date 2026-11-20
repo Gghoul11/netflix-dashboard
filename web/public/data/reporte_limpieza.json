@@ -1,0 +1,30 @@
+{
+  "filas_originales": 8807,
+  "nulos_originales": {
+    "show_id": 0,
+    "type": 0,
+    "title": 0,
+    "director": 2634,
+    "cast": 825,
+    "country": 831,
+    "date_added": 10,
+    "release_year": 0,
+    "rating": 4,
+    "duration": 3,
+    "listed_in": 0,
+    "description": 0
+  },
+  "duplicados_eliminados": 0,
+  "rating_con_duracion_corregidos": 3,
+  "sin_fecha_agregado": 10,
+  "fecha_agregado_antes_de_estreno_anuladas": 14,
+  "atipicos_anio_estreno": 719,
+  "atipicos_duracion_pelicula": 450,
+  "limite_atipico_anio": 2004,
+  "etiquetas_de_origen_excluidas": 4754,
+  "paises_distintos": 119,
+  "generos_distintos": 20,
+  "filas_finales": 8807,
+  "peliculas": 6131,
+  "series": 2676
+}

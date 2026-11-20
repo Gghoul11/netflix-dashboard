@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="1640" viewBox="0 0 1320 1640" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <defs>
+    <pattern id="rayado" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#D4D4D4" stroke-width="2"/>
+    </pattern>
+    <style>
+      .caja { fill: #FFFFFF; stroke: #6B6B6B; stroke-width: 2; }
+      .principal { fill: #FFF5F5; stroke: #E50914; stroke-width: 4; }
+      .t { font-size: 17px; font-weight: 700; fill: #1F1F1F; }
+      .s { font-size: 13px; fill: #6B6B6B; }
+      .xs { font-size: 11px; fill: #8A8A8A; }
+      .guia { stroke: #3B82F6; stroke-width: 1.5; stroke-dasharray: 6 6; fill: none; }
+      .etq { font-size: 13px; font-weight: 700; fill: #3B82F6; }
+      .n1 { fill: #E50914; } .n2 { fill: #1F1F1F; } .n3 { fill: #A3A3A3; }
+      .badge { font-size: 13px; font-weight: 800; fill: #FFFFFF; }
+      .gris { fill: #C9C9C9; } .gris2 { fill: #E5E5E5; }
+    </style>
+  </defs>
+
+  <rect width="1320" height="1640" fill="#F4F4F4"/>
+  <text x="40" y="30" font-size="14" font-weight="700" fill="#6B6B6B">WIREFRAME · Dashboard "Netflix en el mundo" · cuadrícula de 3 columnas × 4 filas · escritorio 1440 px</text>
+
+  <!-- ============ CUADRÍCULA (guías azules) ============ -->
+  <rect class="guia" x="40" y="220" width="360" height="1310"/>
+  <rect class="guia" x="420" y="220" width="360" height="1310"/>
+  <rect class="guia" x="800" y="220" width="360" height="1310"/>
+  <text class="etq" x="220" y="214" text-anchor="middle">COLUMNA 1</text>
+  <text class="etq" x="600" y="214" text-anchor="middle">COLUMNA 2</text>
+  <text class="etq" x="980" y="214" text-anchor="middle">COLUMNA 3</text>
+  <g class="etq">
+    <line class="guia" x1="1170" y1="230" x2="1170" y2="490"/><text x="1180" y="365">FILA 1 · KPIs</text>
+    <line class="guia" x1="1170" y1="510" x2="1170" y2="870"/><text x="1180" y="695">FILA 2</text><text x="1180" y="713" class="s">mapa</text>
+    <line class="guia" x1="1170" y1="890" x2="1170" y2="1190"/><text x="1180" y="1040">FILA 3</text><text x="1180" y="1058" class="s">tiempo y tipo</text>
+    <line class="guia" x1="1170" y1="1210" x2="1170" y2="1490"/><text x="1180" y="1350">FILA 4</text><text x="1180" y="1368" class="s">detalle</text>
+  </g>
+
+  <!-- ============ ENCABEZADO ============ -->
+  <rect class="caja" x="40" y="50" width="1120" height="70" rx="8"/>
+  <circle class="n1" cx="70" cy="85" r="16"/><text class="badge" x="70" y="90" text-anchor="middle">N1</text>
+  <text x="96" y="82" font-size="26" font-weight="800" fill="#E50914">Netflix <tspan fill="#1F1F1F">en el mundo</tspan></text>
+  <text class="s" x="96" y="105">Subtítulo: la pregunta que responde el dashboard</text>
+  <rect x="860" y="70" width="100" height="30" rx="6" fill="#E50914"/><text x="910" y="90" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">Dashboard</text>
+  <rect x="970" y="70" width="80" height="30" rx="6" class="gris2"/><text x="1010" y="90" text-anchor="middle" class="s">Evaluación</text>
+  <rect x="1060" y="70" width="88" height="30" rx="6" class="gris2"/><text x="1104" y="90" text-anchor="middle" class="s">Acerca de</text>
+
+  <!-- ============ FILTROS ============ -->
+  <rect class="caja" x="40" y="135" width="1120" height="58" rx="8"/>
+  <circle class="n3" cx="66" cy="164" r="14"/><text class="badge" x="66" y="169" text-anchor="middle" font-size="11">N3</text>
+  <text class="xs" x="90" y="152">Tipo de contenido</text>
+  <rect x="90" y="158" width="64" height="26" rx="4" fill="#E50914"/><text x="122" y="176" font-size="12" fill="#fff" text-anchor="middle">Todos</text>
+  <rect x="154" y="158" width="76" height="26" class="gris2"/><text x="192" y="176" class="s" text-anchor="middle">Películas</text>
+  <rect x="230" y="158" width="62" height="26" class="gris2"/><text x="261" y="176" class="s" text-anchor="middle">Series</text>
+  <text class="xs" x="315" y="152">Año desde / hasta</text>
+  <rect x="315" y="158" width="80" height="26" rx="4" class="gris2"/><text x="325" y="176" class="s">1925 ▾</text>
+  <rect x="402" y="158" width="80" height="26" rx="4" class="gris2"/><text x="412" y="176" class="s">2021 ▾</text>
+  <text class="xs" x="505" y="152">País</text>
+  <rect x="505" y="158" width="200" height="26" rx="4" class="gris2"/><text x="515" y="176" class="s">Todos los países ▾</text>
+  <rect x="1030" y="158" width="116" height="26" rx="4" fill="none" stroke="#A3A3A3"/><text x="1088" y="176" class="s" text-anchor="middle">Limpiar filtros</text>
+
+  <!-- ============ FILA 1 · KPIs ============ -->
+  <rect class="principal" x="40" y="230" width="360" height="260" rx="10"/>
+  <circle class="n1" cx="370" cy="260" r="18"/><text class="badge" x="370" y="265" text-anchor="middle">N1</text>
+  <text x="62" y="262" font-size="13" font-weight="800" fill="#E50914">KPI PRINCIPAL · TÍTULOS POR PAÍS</text>
+  <text class="s" x="62" y="292">País con más títulos</text>
+  <text x="62" y="326" font-size="30" font-weight="800" fill="#1F1F1F">[ País líder ]</text>
+  <text x="62" y="390" font-size="56" font-weight="800" fill="#1F1F1F">0 000</text>
+  <text class="s" x="62" y="412">títulos</text>
+  <line x1="62" y1="428" x2="378" y2="428" stroke="#D4D4D4"/>
+  <text class="s" x="62" y="452">% del total</text><text x="62" y="476" font-size="20" font-weight="800" fill="#1F1F1F">00%</text>
+  <text class="s" x="230" y="452">Países con títulos</text><text x="230" y="476" font-size="20" font-weight="800" fill="#1F1F1F">000</text>
+
+  <g>
+    <rect class="caja" x="420" y="230" width="360" height="120" rx="10"/>
+    <text class="xs" x="442" y="258">TÍTULOS EN EL CATÁLOGO</text><text x="442" y="296" font-size="28" font-weight="800" fill="#1F1F1F">0 000</text><text class="s" x="442" y="320">con los filtros actuales</text>
+    <rect class="caja" x="800" y="230" width="360" height="120" rx="10"/>
+    <text class="xs" x="822" y="258">AÑO CON MÁS ESTRENOS</text><text x="822" y="296" font-size="28" font-weight="800" fill="#1F1F1F">0000</text><text class="s" x="822" y="320">títulos estrenados ese año</text>
+    <rect class="caja" x="420" y="370" width="360" height="120" rx="10"/>
+    <text class="xs" x="442" y="398">GÉNERO MÁS COMÚN</text><text x="442" y="436" font-size="28" font-weight="800" fill="#1F1F1F">[ Género ]</text><text class="s" x="442" y="460">número de títulos</text>
+    <rect class="caja" x="800" y="370" width="360" height="120" rx="10"/>
+    <text class="xs" x="822" y="398">DIRECTOR MÁS PRODUCTIVO</text><text x="822" y="436" font-size="28" font-weight="800" fill="#1F1F1F">[ Director ]</text><text class="s" x="822" y="460">títulos dirigidos</text>
+    <g><circle class="n2" cx="755" cy="252" r="14"/><text class="badge" x="755" y="257" text-anchor="middle" font-size="11">N2</text></g>
+    <g><circle class="n2" cx="1135" cy="252" r="14"/><text class="badge" x="1135" y="257" text-anchor="middle" font-size="11">N2</text></g>
+    <g><circle class="n2" cx="755" cy="392" r="14"/><text class="badge" x="755" y="397" text-anchor="middle" font-size="11">N2</text></g>
+    <g><circle class="n2" cx="1135" cy="392" r="14"/><text class="badge" x="1135" y="397" text-anchor="middle" font-size="11">N2</text></g>
+  </g>
+
+  <!-- ============ FILA 2 · MAPA + TOP 10 PAÍSES ============ -->
+  <rect class="caja" x="40" y="510" width="740" height="360" rx="10"/>
+  <circle class="n2" cx="750" cy="540" r="16"/><text class="badge" x="750" y="545" text-anchor="middle">N2</text>
+  <text class="t" x="62" y="542">¿Dónde se producen los títulos? — MAPA DE CALOR por país</text>
+  <text class="s" x="62" y="562">Clic en un país = filtrar todo el dashboard</text>
+  <rect x="62" y="578" width="696" height="236" fill="url(#rayado)" stroke="#C9C9C9"/>
+  <!-- continentes esquemáticos -->
+  <path d="M120 610 q60 -20 120 10 q30 40 -10 70 q-30 30 -60 20 q-50 -20 -50 -100z" fill="#E50914" opacity=".85"/>
+  <path d="M210 700 q30 10 30 50 q-10 50 -30 50 q-20 -40 0 -100z" fill="#E50914" opacity=".45"/>
+  <path d="M370 600 q50 -10 80 10 q-10 30 -40 30 q-40 0 -40 -40z" fill="#E50914" opacity=".7"/>
+  <path d="M380 660 q40 0 50 40 q-10 60 -40 70 q-30 -50 -10 -110z" fill="#E50914" opacity=".3"/>
+  <path d="M460 600 q120 -20 200 20 q10 60 -60 70 q-60 10 -90 -20 q-60 -10 -50 -70z" fill="#E50914" opacity=".55"/>
+  <path d="M640 740 q40 -10 60 10 q-10 30 -40 30 q-30 -10 -20 -40z" fill="#E50914" opacity=".5"/>
+  <text x="410" y="700" text-anchor="middle" font-size="15" font-weight="700" fill="#1F1F1F">MAPA COROPLÉTICO (React-Leaflet)</text>
+  <text class="xs" x="62" y="836">Leyenda: ■ 1–9  ■ 10–49  ■ 50–199  ■ 200–999  ■ 1000+  □ sin títulos</text>
+  <text class="xs" x="62" y="856">Nota: un título coproducido cuenta para cada país</text>
+
+  <rect class="caja" x="800" y="510" width="360" height="360" rx="10"/>
+  <circle class="n2" cx="1130" cy="540" r="16"/><text class="badge" x="1130" y="545" text-anchor="middle">N2</text>
+  <text class="t" x="822" y="542">Top 10 países</text>
+  <text class="s" x="822" y="562">Barras horizontales</text>
+  <g>
+    <rect x="900" y="585" width="220" height="18" rx="3" fill="#E50914"/>
+    <rect x="900" y="613" width="80" height="18" rx="3" class="gris"/>
+    <rect x="900" y="641" width="66" height="18" rx="3" class="gris"/>
+    <rect x="900" y="669" width="40" height="18" rx="3" class="gris"/>
+    <rect x="900" y="697" width="36" height="18" rx="3" class="gris"/>
+    <rect x="900" y="725" width="30" height="18" rx="3" class="gris"/>
+    <rect x="900" y="753" width="24" height="18" rx="3" class="gris"/>
+    <rect x="900" y="781" width="22" height="18" rx="3" class="gris"/>
+    <rect x="900" y="809" width="22" height="18" rx="3" class="gris"/>
+    <rect x="900" y="837" width="18" height="18" rx="3" class="gris"/>
+    <g class="xs" text-anchor="end"><text x="892" y="598">País 1</text><text x="892" y="626">País 2</text><text x="892" y="654">País 3</text><text x="892" y="682">…</text></g>
+  </g>
+
+  <!-- ============ FILA 3 · LÍNEA + DONA ============ -->
+  <rect class="caja" x="40" y="890" width="740" height="300" rx="10"/>
+  <circle class="n2" cx="750" cy="920" r="16"/><text class="badge" x="750" y="925" text-anchor="middle">N2</text>
+  <text class="t" x="62" y="922">Estrenos por año — ÁREA APILADA (películas + series)</text>
+  <text class="s" x="62" y="942">Eje X: año de estreno · Eje Y: número de títulos</text>
+  <line x1="90" y1="1150" x2="760" y2="1150" stroke="#6B6B6B"/>
+  <line x1="90" y1="960" x2="90" y2="1150" stroke="#6B6B6B"/>
+  <path d="M90 1148 L400 1145 L500 1140 L580 1120 L640 1080 L690 1010 L715 990 L740 1030 L760 1080 L760 1150 L90 1150z" fill="#3B82F6" opacity=".35"/>
+  <path d="M90 1149 L400 1147 L500 1144 L580 1130 L640 1100 L690 1050 L715 1040 L740 1070 L760 1110 L760 1150 L90 1150z" fill="#E50914" opacity=".5"/>
+  <rect x="640" y="955" width="12" height="12" fill="#E50914"/><text class="xs" x="656" y="966">Películas</text>
+  <rect x="710" y="955" width="12" height="12" fill="#3B82F6"/><text class="xs" x="726" y="966">Series</text>
+  <text class="xs" x="62" y="1176">Nota: 2021 incompleto (datos hasta septiembre)</text>
+
+  <rect class="caja" x="800" y="890" width="360" height="300" rx="10"/>
+  <circle class="n2" cx="1130" cy="920" r="16"/><text class="badge" x="1130" y="925" text-anchor="middle">N2</text>
+  <text class="t" x="822" y="922">Películas vs series — DONA</text>
+  <circle cx="900" cy="1060" r="70" fill="none" stroke="#E50914" stroke-width="30" stroke-dasharray="308 440" transform="rotate(-90 900 1060)"/>
+  <circle cx="900" cy="1060" r="70" fill="none" stroke="#3B82F6" stroke-width="30" stroke-dasharray="128 440" stroke-dashoffset="-310" transform="rotate(-90 900 1060)"/>
+  <text x="900" y="1066" text-anchor="middle" font-size="18" font-weight="800" fill="#1F1F1F">Total</text>
+  <rect x="1000" y="1030" width="12" height="12" fill="#E50914"/><text class="s" x="1018" y="1041">Películas 00%</text>
+  <rect x="1000" y="1060" width="12" height="12" fill="#3B82F6"/><text class="s" x="1018" y="1071">Series 00%</text>
+
+  <!-- ============ FILA 4 · DETALLE ============ -->
+  <rect class="caja" x="40" y="1210" width="360" height="280" rx="10"/>
+  <circle class="n3" cx="372" cy="1238" r="14"/><text class="badge" x="372" y="1243" text-anchor="middle" font-size="11">N3</text>
+  <text class="t" x="62" y="1242">Top 5 géneros — BARRAS</text>
+  <rect x="160" y="1275" width="200" height="22" rx="3" fill="#E50914"/>
+  <rect x="160" y="1310" width="140" height="22" rx="3" class="gris"/>
+  <rect x="160" y="1345" width="80" height="22" rx="3" class="gris"/>
+  <rect x="160" y="1380" width="70" height="22" rx="3" class="gris"/>
+  <rect x="160" y="1415" width="64" height="22" rx="3" class="gris"/>
+  <g class="xs" text-anchor="end"><text x="150" y="1291">Género 1</text><text x="150" y="1326">Género 2</text><text x="150" y="1361">…</text></g>
+
+  <rect class="caja" x="420" y="1210" width="360" height="280" rx="10"/>
+  <circle class="n3" cx="752" cy="1238" r="14"/><text class="badge" x="752" y="1243" text-anchor="middle" font-size="11">N3</text>
+  <text class="t" x="442" y="1242">Nube de géneros</text>
+  <text class="s" x="442" y="1262">Tamaño = nº de títulos · rojo = top 5</text>
+  <text x="600" y="1360" text-anchor="middle" font-size="40" font-weight="800" fill="#E50914">Drama</text>
+  <text x="520" y="1310" text-anchor="middle" font-size="24" font-weight="700" fill="#E50914">Comedia</text>
+  <text x="680" y="1320" text-anchor="middle" font-size="20" font-weight="700" fill="#E50914">Documental</text>
+  <text x="500" y="1400" text-anchor="middle" font-size="16" fill="#8A8A8A">Suspenso</text>
+  <text x="690" y="1400" text-anchor="middle" font-size="18" fill="#8A8A8A">Romance</text>
+  <text x="600" y="1440" text-anchor="middle" font-size="14" fill="#8A8A8A">Terror · Anime · Reality</text>
+
+  <rect class="caja" x="800" y="1210" width="360" height="280" rx="10"/>
+  <circle class="n3" cx="1132" cy="1238" r="14"/><text class="badge" x="1132" y="1243" text-anchor="middle" font-size="11">N3</text>
+  <text class="t" x="822" y="1242">Top 5 directores — BARRAS</text>
+  <rect x="940" y="1275" width="180" height="22" rx="3" fill="#E50914"/>
+  <rect x="940" y="1310" width="170" height="22" rx="3" class="gris"/>
+  <rect x="940" y="1345" width="150" height="22" rx="3" class="gris"/>
+  <rect x="940" y="1380" width="130" height="22" rx="3" class="gris"/>
+  <rect x="940" y="1415" width="130" height="22" rx="3" class="gris"/>
+  <g class="xs" text-anchor="end"><text x="930" y="1291">Director 1</text><text x="930" y="1326">Director 2</text><text x="930" y="1361">…</text></g>
+
+  <!-- ============ PIE ============ -->
+  <rect x="40" y="1510" width="1120" height="30" rx="6" class="gris2"/>
+  <text class="xs" x="600" y="1530" text-anchor="middle">Pie de página: fuente de los datos y autor</text>
+
+  <!-- ============ LEYENDA DE JERARQUÍA ============ -->
+  <g transform="translate(40 1570)">
+    <text x="0" y="16" font-size="14" font-weight="800" fill="#1F1F1F">Jerarquía visual:</text>
+    <circle class="n1" cx="150" cy="11" r="13"/><text class="badge" x="150" y="16" text-anchor="middle" font-size="11">N1</text>
+    <text x="170" y="16" font-size="13" fill="#1F1F1F">KPI principal y título (más grande, borde rojo)</text>
+    <circle class="n2" cx="500" cy="11" r="13"/><text class="badge" x="500" y="16" text-anchor="middle" font-size="11">N2</text>
+    <text x="520" y="16" font-size="13" fill="#1F1F1F">Gráficos principales y KPIs de apoyo</text>
+    <circle class="n3" cx="810" cy="11" r="13"/><text class="badge" x="810" y="16" text-anchor="middle" font-size="11">N3</text>
+    <text x="830" y="16" font-size="13" fill="#1F1F1F">Detalle complementario y filtros</text>
+    <line class="guia" x1="0" y1="44" x2="40" y2="44"/><text x="50" y="49" font-size="13" fill="#3B82F6">Guías de la cuadrícula (3 columnas × 4 filas)</text>
+  </g>
+</svg>
