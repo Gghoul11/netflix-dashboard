@@ -146,5 +146,6 @@ Se analiza por cada aspecto que piden las indicaciones:
 
 ## Repositorio
 
-El proyecto está en el repositorio: **[PENDIENTE: enlace de GitHub]**
-Dashboard en vivo: **[PENDIENTE: enlace de Vercel]**
+El proyecto está en el repositorio: **https://github.com/Gghoul11/netflix-dashboard**
+Dashboard en vivo: **https://caldo-netflix-dashboard-alpha.vercel.app**
+Encuesta: **https://caldo-netflix-dashboard-alpha.vercel.app/evaluacion**

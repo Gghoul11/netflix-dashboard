@@ -5,7 +5,7 @@ Proyecto de la materia de Visualización de Datos (Proyecto 3: Negocios y cultur
 
 **Autor:** Aldo Arceo Beltrán
 
-🔗 **Dashboard en vivo:** _(se agrega al desplegar en Vercel)_
+🔗 **Dashboard en vivo:** https://caldo-netflix-dashboard-alpha.vercel.app
 📊 **Dataset:** [Netflix Movies and TV Shows (Kaggle)](https://www.kaggle.com/datasets/shivamb/netflix-shows): 8 807 títulos, catálogo hasta septiembre de 2021
 
 ![Dashboard](docs/img/dashboard.png)
