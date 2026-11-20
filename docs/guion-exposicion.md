@@ -40,16 +40,10 @@
 7. Mencionar que el código sigue el wireframe: una carpeta para KPIs, otra para gráficos y la paleta en un solo archivo.
 
 ### 5. Fase 4 · Evaluación (1.5 min)
-- "Lo probaron **9 personas** de 20 a 55 años y con perfiles distintos. La encuesta está dentro del mismo dashboard y las respuestas se guardan en la base de datos."
-- Mostrar la gráfica de promedios: **4.56 de 5** en general, y nadie calificó con 1 o 2.
-- "Además de preguntar si les gustó, comprobé si **entendieron**:
-  - el **100%** acertó qué país tiene más títulos (el KPI principal);
-  - en películas vs series y en el género más común acertó el **67%**."
-- "Eso me enseñó que **la jerarquía visual funciona**: lo de arriba se entiende perfecto, pero lo de abajo se ve menos."
-- Mejoras propuestas:
-  - hacer más visible que el mapa filtra todo;
-  - subir los datos clave a la parte de arriba;
-  - usar menos rojo.
+- "Lo probaron **9 personas** de 20 a 55 años; la encuesta está dentro del mismo dashboard."
+- Mostrar la gráfica de promedios: **4.56 de 5**, y las 10 afirmaciones pasaron la meta de 4.
+- "Además de preguntar si les gustó, comprobé si **entendieron**: el **100%** respondió bien qué país tiene más títulos."
+- Lo más bajo fue "visualmente atractivo" (4.33): algunos pidieron **menos rojo**. Queda como mejora futura.
 
 ### 6. Conclusión (30 s)
 - "El catálogo de Netflix **se concentra en Estados Unidos**, es **muy reciente** y **los gustos cambian por región**: dramas en India, anime en Japón, romance en Corea."

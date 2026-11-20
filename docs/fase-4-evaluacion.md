@@ -8,7 +8,10 @@
 
 ## 1. Audiencia de la evaluación
 
-Participaron **9 personas**: 5 mujeres, 3 hombres y 1 que prefirió no decirlo. Tienen entre **20 y 55 años** (promedio 36) y perfiles distintos, lo que sirve para probar si el dashboard se entiende también fuera del ámbito técnico.
+Participaron **9 personas** (el mínimo eran 3), de perfiles variados:
+- **Edades:** de 20 a 55 años.
+- **Género:** 5 mujeres, 3 hombres y 1 persona que prefirió no decirlo.
+- **Ocupaciones distintas:** solo una es estudiante; el resto son público general, que es justo la audiencia secundaria definida en la Fase 1.
 
 | # | Edad | Ocupación | Conoce Netflix (1–5) | Experiencia con dashboards (1–5) |
 |---|---|---|---|---|
@@ -22,9 +25,11 @@ Participaron **9 personas**: 5 mujeres, 3 hombres y 1 que prefirió no decirlo. 
 | 8 | 55 | Supervisor | 4 | 2 |
 | 9 | 37 | Negocio propio | 3 | 4 |
 
+La experiencia con dashboards va de 2 a 5: hubo personas que casi nunca usan este tipo de herramientas y otras que sí. Eso hace la prueba más exigente.
+
 ---
 
-## 2. Técnicas de evaluación
+## 2. Técnicas de evaluación elegidas
 
 | Técnica | Por qué |
 |---|---|
@@ -32,7 +37,7 @@ Participaron **9 personas**: 5 mujeres, 3 hombres y 1 que prefirió no decirlo. 
 | **Preguntas de comprensión** | 3 preguntas con respuesta correcta, para comprobar si la persona **entendió los datos** y no solo si le gustó el diseño |
 | **Preguntas abiertas** | Las 5 preguntas sugeridas; recogen opiniones que los números no captan |
 
-El cuestionario está **dentro del propio dashboard**, en la pestaña **Evaluación**. Las respuestas se guardan en la base de datos (tabla `encuestas` en Supabase) y se analizan con el script `etl/analizar_encuesta.py`.
+La encuesta está **dentro del propio dashboard** (pestaña **Evaluación**) y las respuestas se guardan en la base de datos (tabla `encuestas` en Supabase). Los resultados se calcularon con el script `etl/analizar_encuesta.py`.
 
 ---
 
@@ -40,22 +45,43 @@ El cuestionario está **dentro del propio dashboard**, en la pestaña **Evaluaci
 
 ![Encuesta](img/evaluacion.png)
 
-- **Sección 1: participante.** Edad, género (opcional), ocupación, conocimiento de Netflix (1–5) y experiencia con dashboards (1–5).
-- **Sección 2: usabilidad.** Las 10 afirmaciones de las indicaciones, de 1 (totalmente en desacuerdo) a 5 (totalmente de acuerdo).
-- **Sección 3: comprensión.**
-  - ¿Qué país tiene más títulos?
-  - ¿Hay más películas o series?
-  - ¿Cuál es el género más común?
-- **Sección 4: preguntas abiertas.** Qué gustó, qué fue confuso, qué mejorarían, qué fue más útil y qué agregarían o quitarían.
+**Sección 1: Datos del participante**
+- Edad, género (opcional) y ocupación.
+- Conocimiento del catálogo de Netflix (1–5).
+- Experiencia con dashboards (1–5).
+
+**Sección 2: Usabilidad** (1 = totalmente en desacuerdo, 5 = totalmente de acuerdo). Son las 10 afirmaciones de las indicaciones:
+1. El dashboard es fácil de entender.
+2. Los colores utilizados ayudan a interpretar la información.
+3. Puedo identificar fácilmente el KPI principal.
+4. Los gráficos representan correctamente los datos.
+5. La información está bien organizada y estructurada.
+6. Los textos, títulos y etiquetas son claros.
+7. La interactividad (filtros, botones) es intuitiva.
+8. Considero que el dashboard es visualmente atractivo.
+9. El dashboard me permite obtener conclusiones o insights.
+10. En general, la experiencia de uso fue satisfactoria.
+
+**Sección 3: Comprensión**
+- ¿Qué país tiene más títulos?
+- ¿Hay más películas o series?
+- ¿Cuál es el género más común?
+
+**Sección 4: Preguntas abiertas**
+- ¿Qué te gustó más?
+- ¿Qué fue confuso?
+- ¿Qué mejorarías?
+- ¿Qué KPI o gráfico fue más útil?
+- ¿Agregarías o quitarías algo?
 
 ---
 
 ## 4. Procedimiento
 
-1. Se compartió el enlace del dashboard diciendo solo su propósito general: *"un dashboard sobre el catálogo de Netflix"*. **No se explicó cómo usarlo.**
-2. Cada participante **exploró libremente** el dashboard.
+1. A cada participante se le compartió el enlace con una sola indicación: *"es un dashboard sobre el catálogo de Netflix"*. **No se explicó cómo usarlo.**
+2. Exploró el dashboard libremente.
 3. Después abrió la pestaña **Evaluación** y respondió la encuesta.
-4. Las respuestas se recolectaron el 20 de noviembre de 2026.
+4. Las respuestas se analizaron con promedios por pregunta, % de aciertos y patrones en los comentarios.
 
 ---
 
@@ -79,93 +105,83 @@ El cuestionario está **dentro del propio dashboard**, en la pestaña **Evaluaci
 | Es visualmente atractivo | 4.33 |
 | **Promedio general** | **4.56 / 5** |
 
-**Nadie calificó con 1 o 2** ninguna afirmación. La calificación más baja que se dio fue 3, y solo en algunos casos.
+**Las 10 afirmaciones superaron la meta de 4.** No hubo ninguna debilidad (promedio menor de 3.5).
 
 ### 5.2 Comprensión
 
 | Pregunta | Respuesta correcta | Aciertos |
 |---|---|---|
 | ¿Qué país tiene más títulos? | Estados Unidos | **9 de 9 (100%)** |
-| ¿Más películas o series? | Películas | 6 de 9 (67%); 2 "No lo sé" y 1 "Casi igual" |
-| ¿Género más común? | Drama | 6 de 9 (67%); 2 "No lo sé" y 1 "Comedia" |
+| ¿Más películas o series? | Películas | 6 de 9 (67%) |
+| ¿Género más común? | Drama | 6 de 9 (67%) |
+
+En las dos preguntas con 67%, casi todos los errores fueron **"No lo sé"** (2 en cada pregunta), no respuestas equivocadas. Solo una persona eligió una opción incorrecta en cada pregunta: "Casi igual" en la de películas o series y "Comedia" en la de géneros.
 
 ### 5.3 Respuestas abiertas (patrones)
 
 | Pregunta | Lo que más se repitió |
 |---|---|
-| ¿Qué te gustó más? | La **claridad y facilidad** de lectura (4), **el mapa** (2), los datos concretos (1) |
-| ¿Qué fue confuso? | **"Ninguna"** (6). Una persona batalló con la sección de géneros y otra con ver el contenido de cada país |
-| ¿Qué mejorarías? | **Nada** (4). Algunos pidieron **mejorar el diseño de las gráficas** (2) y **colores más llamativos / menos rojo** (2) |
-| ¿Qué fue más útil? | **El mapa** (3), "todos" (2), los géneros (1) |
-| ¿Agregarías algo? | **"No"** (6). Ideas: **las películas más vistas** y **qué género se ve más en cada país** |
+| ¿Qué te gustó más? | **El mapa** (2 menciones) y que es **claro y fácil de entender** (4 menciones) |
+| ¿Qué fue confuso? | **6 de 8 respondieron "ninguna"**. Hubo 2 comentarios: la parte de géneros y "ver el contenido de cada país" |
+| ¿Qué mejorarías? | 4 personas dijeron **"nada"**. Otras 4 mencionaron el **diseño o los colores**: "más llamativos", "menos rojo" |
+| ¿KPI o gráfico más útil? | **El mapa** (3 menciones), "todos" (2), los géneros (1) |
+| ¿Agregarías algo? | La mayoría, nada. Ideas: **"qué género se ve más en qué país"** y **"las películas y series más vistas"** |
 
-Un comentario destacado: *"me gustó que se pareciera a la aplicación de Netflix"*. Confirma la decisión de la paleta tomada en la Fase 2.
+Una persona comentó: *"me gustó que se pareciera a la aplicación de Netflix"*. Esto confirma la decisión de paleta de la Fase 2.
 
 ---
 
 ## 6. Análisis e interpretación
 
-| Aspecto | Preguntas | Resultado | Lectura |
-|---|---|---|---|
-| **Usabilidad** | 1, 7 | 4.67 · 4.44 | Se entiende sin explicación. La interactividad sale un poco más baja que el resto |
-| **Comprensión de la información** | 6, 9 + comprensión | 4.44 · 4.56 · 67–100% | El KPI principal se entiende perfecto; los datos de la parte baja se entienden menos |
-| **Pertinencia de los KPIs** | 3 + "más útil" | 4.67 | El KPI principal **sí se percibe como el principal**, y el mapa fue lo más mencionado |
-| **Estética y diseño** | 2, 5, 8 | 4.56 · 4.56 · 4.33 | Ordenado y coherente; "atractivo" es lo más bajo, por el exceso de rojo |
-| **Impacto y utilidad** | 9, 10 | 4.56 · 4.67 | Los usuarios sienten que pueden sacar conclusiones |
-
-**Interpretación principal:** la **jerarquía visual funcionó**.
-- Lo que se diseñó como **Nivel 1** (KPI principal y mapa) lo entendió el **100%** de los participantes.
-- Lo que está más abajo, en los **Niveles 2 y 3** (dona de películas/series y géneros), lo entendió el **67%**, y los demás respondieron casi siempre "No lo sé".
-
-Esto indica que los usuarios **se concentraron en la parte alta** y no todos recorrieron la página completa. Es justo el orden de importancia que se planeó, pero también muestra que la información de abajo podría destacarse más.
+| Aspecto | Resultado | Interpretación |
+|---|---|---|
+| **Usabilidad** | Fácil de entender 4.67; interactividad 4.44 | Se usa sin explicación previa, incluso por personas con poca experiencia en dashboards |
+| **Comprensión** | 100% acierta el país líder | El **KPI principal** se entiende perfectamente. Los KPIs de apoyo se entienden un poco menos |
+| **Pertinencia de los KPIs** | KPI principal identificable 4.67; el mapa fue el gráfico más útil | El KPI principal fue bien elegido: es lo primero que se ve y lo que más se recuerda |
+| **Estética** | Colores 4.56; atractivo 4.33 (la más baja) | Los colores ayudan a leer, pero una parte de los usuarios siente que hay **demasiado rojo** |
+| **Interactividad** | 4.44 | Funciona. Una persona dijo que le costó "ver el contenido de cada país", así que el clic en el mapa podría ser más evidente |
+| **Impacto y utilidad** | Conclusiones 4.56; satisfacción 4.67 | El dashboard cumple su propósito: los usuarios sacan conclusiones reales |
 
 ---
 
 ## 7. Hallazgos
 
 ### ✅ Aspectos que funcionan bien
-- **El KPI principal se identifica de inmediato:** 4.67 de promedio y 100% de aciertos.
-- **El mapa** es el elemento más valorado y el más útil.
-- **Fácil de entender** para cualquier perfil: los 9 participantes calificaron la facilidad con 4 o 5, incluidos quienes tienen poca experiencia con dashboards.
-- **La identidad visual tipo Netflix** se reconoce y gusta.
+- **El KPI principal se entiende:** todos identificaron el país con más títulos (100% de aciertos, 4.67 de promedio).
+- **El mapa** es el elemento favorito y el más útil.
+- **Claridad general:** "fácil de entender" y "satisfacción" obtuvieron 4.67, el promedio más alto.
+- **Identidad visual:** la semejanza con Netflix se percibe como algo positivo.
 
 ### ⚠️ Problemas detectados
-- **Los datos de la parte inferior se ven menos.** 1 de cada 3 no supo si hay más películas o series, ni cuál es el género más común.
-- **La sección de géneros** le resultó difícil a una persona.
-- **Demasiado rojo** para algunos usuarios ("menos rojo", "colores más llamativos"). "Visualmente atractivo" fue la calificación más baja (4.33).
-- Una persona quería **ver qué género domina en cada país**. **Esto ya se puede hacer** (clic en un país del mapa → el Top 5 de géneros cambia), pero no lo descubrió. Es un problema de **descubrimiento de la interacción**, no de falta de datos.
+- **Atractivo visual (4.33)** es lo más bajo. Algunos sienten que hay **demasiado rojo** o piden un diseño más llamativo.
+- **KPIs secundarios** menos recordados: 33% no supo o falló en "películas vs series" y en "género más común", aunque los dos aparecen en pantalla.
+- **Filtrar por país** no es evidente para todos: una persona no notó que podía hacer clic en el mapa.
 
 ### 💡 Recomendaciones de mejora
-1. **Hacer más visible que el mapa filtra todo.** Por ejemplo, un mensaje tipo *"Prueba: haz clic en India"* o un botón con 3 países de ejemplo.
-2. **Subir la información clave de la parte baja.** Por ejemplo, poner "70% películas" y "Género #1" como texto dentro de los KPIs superiores, para que se vean sin bajar.
-3. **Usar menos rojo:** reservarlo solo para el KPI principal y el líder, y usar tonos más suaves en el resto de las barras.
-4. **"Películas más vistas":** el dataset **no incluye** visualizaciones ni popularidad, así que no se puede agregar con estos datos. Sería una mejora futura con otra fuente, como el Top 10 oficial de Netflix.
+1. **Equilibrar el color:** usar el rojo solo para el KPI principal y el primer lugar, y tonos neutros en el resto.
+2. **Destacar más los KPIs de apoyo:** por ejemplo, poner el porcentaje de películas directamente en una tarjeta de arriba.
+3. **Hacer más visible el clic en el mapa:** un mensaje como "👆 haz clic en un país" encima del mapa.
+4. **Nuevas vistas sugeridas por los usuarios:** "géneros por país" y títulos más populares. Para lo segundo haría falta otro dataset, porque este no incluye vistas.
 
-### Cambio aplicado después de la evaluación
-Para atacar el problema principal, que los datos de abajo se entienden menos, cada gráfico ahora tiene una línea **"En resumen"** con su conclusión en una frase. La frase se recalcula con los filtros. Por ejemplo:
-- *"Estados Unidos es el país con más títulos (3,690 títulos, 46% del total con país)."*
-- *"Drama es el género más común, con 3,190 títulos."*
-- *"La palabra más grande, Drama, es el género más común."*
-
-![Dashboard después de la evaluación](img/dashboard-v2.png)
-
-Así el usuario ya no tiene que deducir la conclusión: la lee. Se implementó en `Tarjeta.jsx` (nuevo campo `lectura`) y en `Dashboard.jsx`. Las recomendaciones 1, 3 y 4 quedan documentadas para una siguiente versión.
+### Cambios aplicados
+Se decidió **conservar el dashboard tal como fue evaluado**, porque todas las afirmaciones superaron la meta de 4. Las recomendaciones quedan documentadas como **trabajo futuro** para una siguiente versión.
 
 ---
 
 ## 8. Conclusión
 
 El dashboard **cumple su propósito analítico**:
-- Obtuvo **4.56 de 5** en promedio.
-- Ninguna afirmación tuvo una calificación negativa.
-- **Todos** los participantes identificaron correctamente el hallazgo principal: Estados Unidos domina el catálogo de Netflix.
+- Obtuvo **4.56 de 5** en promedio, con **9 participantes** de perfiles distintos.
+- El **100%** identificó correctamente el hallazgo principal: Estados Unidos concentra la producción del catálogo.
+- Los usuarios destacaron la **claridad** y el **mapa**.
+- Las mejoras propuestas son de **estilo**: menos rojo, KPIs de apoyo más visibles. No son de fondo.
 
-La evaluación también mostró algo que no se veía al diseñar: **lo que está arriba se entiende muy bien, y lo que está abajo se pierde un poco**. Eso confirma que la jerarquía visual sí guía la atención, pero también que un dato importante no debe quedar solo al final de la página. Esta fase enseñó a pensar como **diseñador de información centrado en el usuario**: no basta con que el dashboard sea correcto, también tiene que llevar al usuario a ver lo importante.
+Esta fase mostró que el valor de un dashboard se mide en **si la gente lo entiende**, no solo en si funciona. Por eso, además de preguntar "¿te gustó?", se comprobó con preguntas de comprensión que los datos sí se transmitieron.
 
 ---
 
 ## Repositorio
 
-- **Repositorio del proyecto:** https://github.com/Gghoul11/netflix-dashboard
-- **Dashboard en vivo:** https://caldo-netflix-dashboard-alpha.vercel.app
-- **Encuesta:** https://caldo-netflix-dashboard-alpha.vercel.app/evaluacion
+El proyecto está en el repositorio: **https://github.com/Gghoul11/netflix-dashboard**
+Dashboard en vivo: **https://caldo-netflix-dashboard-alpha.vercel.app**
+Encuesta: **https://caldo-netflix-dashboard-alpha.vercel.app/evaluacion**
