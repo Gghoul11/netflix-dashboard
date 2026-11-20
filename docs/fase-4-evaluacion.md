@@ -141,8 +141,15 @@ Esto indica que los usuarios **se concentraron en la parte alta** y no todos rec
 3. **Usar menos rojo:** reservarlo solo para el KPI principal y el líder, y usar tonos más suaves en el resto de las barras.
 4. **"Películas más vistas":** el dataset **no incluye** visualizaciones ni popularidad, así que no se puede agregar con estos datos. Sería una mejora futura con otra fuente, como el Top 10 oficial de Netflix.
 
-### Cambios aplicados
-Por el alcance y los tiempos de la entrega, **no se modificó el dashboard** después de la evaluación. Las recomendaciones quedan documentadas como **siguiente versión**. Ninguna requiere cambiar los KPIs ni la estructura: son ajustes de presentación.
+### Cambio aplicado después de la evaluación
+Para atacar el problema principal, que los datos de abajo se entienden menos, cada gráfico ahora tiene una línea **"En resumen"** con su conclusión en una frase. La frase se recalcula con los filtros. Por ejemplo:
+- *"Estados Unidos es el país con más títulos (3,690 títulos, 46% del total con país)."*
+- *"Drama es el género más común, con 3,190 títulos."*
+- *"La palabra más grande, Drama, es el género más común."*
+
+![Dashboard después de la evaluación](img/dashboard-v2.png)
+
+Así el usuario ya no tiene que deducir la conclusión: la lee. Se implementó en `Tarjeta.jsx` (nuevo campo `lectura`) y en `Dashboard.jsx`. Las recomendaciones 1, 3 y 4 quedan documentadas para una siguiente versión.
 
 ---
 
