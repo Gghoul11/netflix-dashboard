@@ -9,3 +9,9 @@ web/dist/
 web/.env.local
 # Respaldo de encuestas (datos personales de participantes)
 data/encuestas.csv
+
+# Archivos personales (se quedan solo en la computadora)
+docs/guion-exposicion.md
+docs/pdf/guion-exposicion.pdf
+docs/generar_pdf.py
+docs/resultados-encuesta.md
